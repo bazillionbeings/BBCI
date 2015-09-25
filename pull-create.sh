@@ -6,12 +6,17 @@ IMAGE_NAME=$2
 ADDRESS=$3
 
 if [ "$FOLDER_NAME" = "" ]; then
-  echo "Please provide docker image name as a first argument"
+  echo "Please provide directory name as a first argument"
+  exit 1
+fi
+
+if [ "$IMAGE_NAME" = "" ]; then
+  echo "Please provide image name as a second argument"
   exit 1
 fi
 
 if [ "$ADDRESS" = "" ]; then
-  echo "Please provide git address as a second argument"
+  echo "Please provide git address as a third argument"
   exit 1
 fi
 DOCKER_CODES_DIR="$HOME/docker-codes"

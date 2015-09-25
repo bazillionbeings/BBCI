@@ -5,7 +5,7 @@ let app = require('express')(),
 
 app.post('/', (req, res) => {
     console.log('hit');
-    shell.exec('./pull-create.sh testDocker ayeressian/testdocker https://github.com/bazillionbeings/testdocker.git');
+    shell.exec('./pull-create.sh testdocker ayeressian/testdocker https://github.com/bazillionbeings/testdocker.git');
     res.end();
 });
 
